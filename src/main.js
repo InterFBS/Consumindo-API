@@ -5,8 +5,10 @@ const showData = (result) => {
   for (const campo in result) {
     if (Object.hasOwnProperty.call(result, campo)) {
       //Se objeto pertece ao campo, vai mostra seu objeto(campo)
-      if (document.querySelector("#"+campo))
-      console.log(campo)
+      if (document.querySelector("#"+campo)){
+        //Preecher os campos automático
+        document.querySelector("#"+campo).value = result[campo]
+      }
     }
   }
 }
